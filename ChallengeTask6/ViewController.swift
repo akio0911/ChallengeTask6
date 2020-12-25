@@ -16,14 +16,16 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         slider.minimumValue = 1
         slider.maximumValue = 100000
+        print(slider.value)
     }
     
     @IBAction func randomButton(_ sender: Any) {
-        if label.text == String(Int(slider.value)) {
-            presentAlert(message: "あたり\nあなたの値は\(Int(slider.value))です")
+        if label.text == String.localizedStringWithFormat("%d", Int(slider.value)) {
+            presentAlert(message: "あたり\nあなたの値は\(String.localizedStringWithFormat("%d", Int(slider.value)))です")
         } else {
-            presentAlert(message: "ハズレ\nあなたの値は\(Int(slider.value))です")
+            presentAlert(message: "ハズレ\nあなたの値は\(String.localizedStringWithFormat("%d", Int(slider.value)))です")
         }
+        print(slider.value)
     }
     
     private func presentAlert(message: String) {
