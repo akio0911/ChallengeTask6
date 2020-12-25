@@ -25,7 +25,6 @@ final class ViewController: UIViewController {
         } else {
             presentAlert(message: "ハズレ\nあなたの値は\(sliderValue)です")
         }
-        print(slider.value)
     }
     
     private func presentAlert(message: String) {
