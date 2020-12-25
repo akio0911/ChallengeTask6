@@ -29,7 +29,7 @@ final class ViewController: UIViewController {
     private func presentAlert(message: String) {
         let alert = UIAlertController(title: "結果", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "再挑戦", style: .default, handler: {(UIAlertAction) in
-                                        let num = Int.random(in: 0...100)
+                                        let num = Int.random(in: 1...100)
                                         self.label.text = String(num)}))
         present(alert, animated: true, completion: nil)
     }
